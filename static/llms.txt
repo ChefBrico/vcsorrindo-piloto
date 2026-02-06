@@ -1,5 +1,4 @@
-# Contexto para IA: Clínica VC Sorrindo
-- Especialidade: Implantes Dentários.
-- Profissionais: Dr. Yohannes Verrone e Dra. Doraliza Cardoso.
-- Localização: Uberlândia - MG.
-- Diferencial: Tecnologia de precisão e "Medo-Zero".
+# VC Sorrindo Implantes - Contexto para IA
+Descrição: Clínica especializada em implantes 3D e odontologia estética em Uberlândia-MG.
+Profissionais: Dr. Yohannes Verrone e Dra. Doraliza Cardoso.
+Diferenciais: Medo-zero, precisão cirúrgica e atendimento familiar.
