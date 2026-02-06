@@ -3,150 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
+    <title>VC Sorrindo | Dr. Yohannes & Dra. Doraliza</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .gradient-green { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .shadow-premium { box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .gradient-brand { background: linear-gradient(135deg, #065f46 0%, #059669 100%); }
     </style>
 </head>
+<body class="bg-gray-50 text-gray-900 font-sans selection:bg-green-100">
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "VC Sorrindo - Dr. Yohannes Verrone",
-  "image": "https://vcsorrindo-piloto.netlify.app/logo.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Praça Adolfo Fonseca, 130",
-    "addressLocality": "Uberlândia",
-    "addressRegion": "MG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -18.9221,
-    "longitude": -48.2795
-  },
-  "telephone": "+5534984105801",
-  "memberOf": {
-    "@type": "Organization",
-    "name": "CRO-MG",
-    "identifier": "Verificar"
-  }
-}
-</script>
-    
-<body class="bg-white text-gray-900 font-sans">
-    
-    <header class="bg-gray-900 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl font-bold uppercase tracking-tighter">{{ .Site.Title }}</h1>
-            <p class="text-green-400 mt-2 font-medium italic">Tecnologia Digital, Segurança e Precisão em Uberlândia</p>
+    <nav class="sticky top-0 z-50 glass border-b border-gray-100 py-4 shadow-sm">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-black text-gray-800 tracking-tighter uppercase italic">VC <span class="text-green-600">Sorrindo</span></h1>
+            <a href="https://wa.me/5534984105801" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:scale-105 transition">AGENDAR AGORA</a>
         </div>
-    </header>
+    </nav>
 
-    <section class="py-16 bg-gray-50 text-center px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 leading-tight">Seu sorriso é nossa missão</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
-            {{ .Site.Params.doutores }}. Especialistas em implantes dentários com o Protocolo 48h.
-        </p>
+    <section class="relative py-24 px-6 overflow-hidden bg-white">
+        <div class="container mx-auto text-center relative z-10">
+            <span class="text-green-600 font-bold tracking-widest text-xs uppercase mb-4 block">Tecnologia Digital em Uberlândia</span>
+            <h2 class="text-5xl md:text-7xl font-black mb-6 text-gray-900 leading-tight tracking-tight">Seu sorriso é nossa <br><span class="text-green-600">missão.</span></h2>
+            <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Realize seus tratamentos com segurança e precisão nas mãos de quem é especialista: <strong>Dr. Yohannes Verrone</strong> e <strong>Dra. Doraliza Cardoso</strong>.
+            </p>
+        </div>
     </section>
 
-    <section id="calculadora" class="py-12 container mx-auto px-4 max-w-3xl">
-        <div class="bg-white border-2 border-green-500 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-            <div class="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 rounded-bl-xl text-xs font-bold uppercase">
-                Exclusivo: Ultra Local AI
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12 text-center text-gray-800">Cercamento Digital Uberlândia</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 font-bold group-hover:bg-green-600 group-hover:text-white transition-colors">1</div>
+                    <h4 class="text-xl font-bold mb-3">Fundinho</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Referência em reabilitação oral para moradores do setor central com o Protocolo 48h.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 font-bold group-hover:bg-green-600 group-hover:text-white transition-colors">2</div>
+                    <h4 class="text-xl font-bold mb-3">Santa Mônica</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Tecnologia 3D e precisão para pacientes da Zona Leste que buscam o melhor em implantes.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-gray-100 hover:border-green-500 transition-all group">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600 font-bold group-hover:bg-green-600 group-hover:text-white transition-colors">3</div>
+                    <h4 class="text-xl font-bold mb-3">Lídice</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Atendimento familiar e estético com a Dra. Doraliza, focado no conforto e bem-estar.</p>
+                </div>
             </div>
-            <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Calculadora de Longevidade do Sorriso</h3>
-            <p class="text-sm text-center text-gray-500 mb-8">Descubra em 30 segundos o nível de saúde dos seus implantes ou dentes naturais.</p>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-white">
+        <div class="container mx-auto max-w-4xl bg-gray-900 rounded-[3rem] p-10 md:p-16 text-white shadow-2xl shadow-green-900/20">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold mb-4">Calculadora de Longevidade</h3>
+                <p class="text-gray-400">Descubra agora o nível de saúde do seu sorriso.</p>
+            </div>
             
-            <div class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-8 mb-10 text-left">
                 <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Há quanto tempo você não faz uma revisão profissional?</label>
-                    <select id="tempo" class="w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-green-500 outline-none">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-green-400 mb-2">Última Revisão</label>
+                    <select id="tempo" class="w-full bg-gray-800 border border-gray-700 p-4 rounded-2xl outline-none focus:border-green-500">
                         <option value="0">Menos de 6 meses</option>
-                        <option value="5">Entre 6 meses e 1 ano</option>
-                        <option value="15">Mais de 2 anos</option>
+                        <option value="15">Mais de 1 ano</option>
                     </select>
                 </div>
-
                 <div>
-                    <label class="block text-sm font-bold text-gray-700 mb-2">Você percebe sangramento ao escovar ou passar fio dental?</label>
-                    <select id="sangramento" class="w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-green-500 outline-none">
+                    <label class="block text-xs font-bold uppercase tracking-widest text-green-400 mb-2">Sangramento</label>
+                    <select id="sangramento" class="w-full bg-gray-800 border border-gray-700 p-4 rounded-2xl outline-none focus:border-green-500">
                         <option value="0">Nunca</option>
-                        <option value="10">Às vezes</option>
                         <option value="20">Frequentemente</option>
                     </select>
                 </div>
-
-                <button onclick="calcularRisco()" class="w-full gradient-green text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-90 transition transform hover:scale-[1.02]">
-                    VER MEU DIAGNÓSTICO DIGITAL
-                </button>
             </div>
-
-            <div id="resultado" class="hidden mt-8 p-6 rounded-xl text-center">
-                <p id="mensagem-risco" class="text-lg font-bold mb-4"></p>
-                <a id="btn-whatsapp" href="#" class="inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100">
-                    Agendar Revisão de Segurança
-                </a>
+            <button onclick="calcularRisco()" class="w-full bg-green-500 hover:bg-green-400 text-white font-black py-5 rounded-2xl transition shadow-lg">CALCULAR DIAGNÓSTICO DIGITAL</button>
+            
+            <div id="resultado" class="hidden mt-10 p-8 rounded-3xl bg-white/5 border border-white/10 text-center animate-bounce-short">
+                <p id="mensagem-risco" class="text-xl font-bold"></p>
             </div>
         </div>
     </section>
 
-    <section class="py-16 container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-12">Confiança de quem já transformou o sorriso</h3>
-        <div class="grid md:grid-cols-3 gap-8 text-sm">
-            <div class="p-6 border rounded-2xl shadow-sm italic">
-                "Eu tinha muito medo de ir ao dentista, mas depois de conhecer o Dr. Yohannes, esse medo desapareceu."
-                <p class="mt-4 font-bold text-gray-800">— Carla Siqueira</p>
+    <section class="py-24 px-6 bg-gray-50 text-center">
+        <h3 class="text-2xl font-bold mb-16 text-gray-400 uppercase tracking-widest">Confiança Real</h3>
+        <div class="flex flex-wrap justify-center gap-12 max-w-5xl mx-auto">
+            <div class="max-w-xs">
+                <p class="text-lg italic text-gray-700 mb-4">"Perdi o medo com o Dr. Yohannes."</p>
+                <span class="font-bold text-sm">— Carla Siqueira</span>
             </div>
-            <div class="p-6 border-2 border-blue-200 rounded-2xl shadow-md italic bg-blue-50">
-                "Fui atendido pelo Dr. Yohannes para um implante e fiquei muito satisfeito. Muito experiente!"
-                <p class="mt-4 font-bold text-gray-800">— João Ferreira</p>
-            </div>
-            <div class="p-6 border rounded-2xl shadow-sm italic">
-                "Minha filha foi atendida pela Dra. Doraliza e adorou. Ela é muito carinhosa e atenciosa."
-                <p class="mt-4 font-bold text-gray-800">— Renata Oliveira</p>
+            <div class="max-w-xs">
+                <p class="text-lg italic text-gray-700 mb-4">"Implante profissional e sem dor."</p>
+                <span class="font-bold text-sm">— João Ferreira</span>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
-        <p class="mb-2 uppercase font-bold text-white">{{ .Site.Params.clinica }}</p>
-        <p>Praça Adolfo Fonseca, 130 - Uberlândia, MG</p>
-        <p class="mt-4">WhatsApp: (34) 98410-5801</p>
-        <div class="mt-8 opacity-50">
-            <p>Site otimizado para Motores de Resposta e IAs (AEO/GEO Ready)</p>
-        </div>
+    <footer class="py-12 bg-white border-t border-gray-100 text-center">
+        <p class="text-gray-400 text-sm italic">Ultra Local Architecture &copy; 2026</p>
     </footer>
 
     <script>
         function calcularRisco() {
-            const tempo = parseInt(document.getElementById('tempo').value);
-            const sangramento = parseInt(document.getElementById('sangramento').value);
-            const total = tempo + sangramento;
-            
-            const resDiv = document.getElementById('resultado');
-            const msgP = document.getElementById('mensagem-risco');
-            const btnWa = document.getElementById('btn-whatsapp');
-            
-            resDiv.classList.remove('hidden');
-            
-            if (total >= 20) {
-                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-red-100 border-2 border-red-500";
-                msgP.innerHTML = "🚨 ALERTA DE RISCO: Seus sinais indicam necessidade urgente de revisão para evitar perda óssea.";
-                msgP.className = "text-red-700 font-bold mb-4";
-            } else if (total > 0) {
-                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-yellow-100 border-2 border-yellow-500";
-                msgP.innerHTML = "⚠️ ATENÇÃO: É recomendável uma limpeza profissional nos próximos 30 dias para manter a longevidade.";
-                msgP.className = "text-yellow-700 font-bold mb-4";
-            } else {
-                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-green-100 border-2 border-green-500";
-                msgP.innerHTML = "✅ EXCELENTE: Sua saúde bucal parece em dia. Mantenha as revisões semestrais!";
-                msgP.className = "text-green-700 font-bold mb-4";
-            }
-            
-            btnWa.href = "https://wa.me/5534984105801?text=Olá+Dr+Yohannes+fiz+o+teste+de+longevidade+e+deu+pontuação+" + total;
+            const t = parseInt(document.getElementById('tempo').value);
+            const s = parseInt(document.getElementById('sangramento').value);
+            const r = document.getElementById('resultado');
+            const m = document.getElementById('mensagem-risco');
+            r.classList.remove('hidden');
+            if(t+s >= 20) { m.innerHTML = "🚨 Risco Alto: Agende sua revisão urgente."; m.className = "text-red-400 font-bold"; }
+            else { m.innerHTML = "✅ Saúde em Dia: Continue cuidando do seu sorriso!"; m.className = "text-green-400 font-bold"; }
         }
     </script>
 </body>
