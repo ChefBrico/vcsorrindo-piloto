@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <header class="bg-gray-900 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold">{{ .Site.Title }}</h1>
+            <p class="text-green-400 mt-2">Tecnologia, Segurança e Precisão em Uberlândia</p>
+        </div>
+    </header>
+
+    <section class="py-16 bg-gray-50 text-center px-4">
+        <h2 class="text-4xl font-extrabold mb-4">Seu sorriso é nossa missão</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cuide da sua saúde bucal com quem entende do assunto. Dr. Yohannes e Dra. Doraliza Cardoso.</p>
+        <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="inline-block mt-8 bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition">AGENDAR CONSULTA AGORA</a>
+    </section>
+
+    <section class="py-16 container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12">O que nossos clientes dizem</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 border rounded-xl shadow-sm italic">
+                "Eu tinha muito medo de ir ao dentista, mas depois de conhecer o Dr. Yohannes, esse medo desapareceu."
+                <p class="mt-4 font-bold text-gray-800">— Carla Siqueira</p>
+            </div>
+            <div class="p-6 border rounded-xl shadow-sm italic text-blue-900 bg-blue-50">
+                "Fui atendido pelo Dr. Yohannes para um implante e fiquei muito satisfeito. Muito experiente!"
+                <p class="mt-4 font-bold text-gray-800">— João Ferreira</p>
+            </div>
+            <div class="p-6 border rounded-xl shadow-sm italic">
+                "Minha filha foi atendida pela Dra. Doraliza e adorou a consulta! Muito carinhosa."
+                <p class="mt-4 font-bold text-gray-800">— Renata Oliveira</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-500">
+        <p>&copy; 2026 {{ .Site.Params.clinica }} - Fale conosco: (34) 98410-5801</p>
+        <p class="text-xs mt-2 italic">Site otimizado para IAs e Buscas Locais (GEO-WAR Strategy)</p>
+    </footer>
+</body>
+</html>
