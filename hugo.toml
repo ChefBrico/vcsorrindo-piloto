@@ -1,8 +1,10 @@
 baseURL = "/"
 languageCode = "pt-br"
 title = "VC Sorrindo | Dr. Yohannes & Dra. Doraliza"
-theme = "ananke"
+# Deixe o campo theme vazio para usarmos a nossa pasta layout própria
+theme = "" 
 
 [params]
   whatsapp = "5534984105801"
-  description = "Especialistas em Implantes e Saúde Bucal em Uberlândia."
+  clinica = "VC Sorrindo"
+  doutores = "Dr. Yohannes Verrone e Dra. Doraliza Cardoso"
