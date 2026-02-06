@@ -5,42 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-green { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+    </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
+    
     <header class="bg-gray-900 text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl font-bold">{{ .Site.Title }}</h1>
-            <p class="text-green-400 mt-2">Tecnologia, Segurança e Precisão em Uberlândia</p>
+            <h1 class="text-3xl font-bold uppercase tracking-tighter">{{ .Site.Title }}</h1>
+            <p class="text-green-400 mt-2 font-medium italic">Tecnologia Digital, Segurança e Precisão em Uberlândia</p>
         </div>
     </header>
 
     <section class="py-16 bg-gray-50 text-center px-4">
-        <h2 class="text-4xl font-extrabold mb-4">Seu sorriso é nossa missão</h2>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cuide da sua saúde bucal com quem entende do assunto. Dr. Yohannes e Dra. Doraliza Cardoso.</p>
-        <a href="https://wa.me/{{ .Site.Params.whatsapp }}" class="inline-block mt-8 bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-700 transition">AGENDAR CONSULTA AGORA</a>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900 leading-tight">Seu sorriso é nossa missão</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+            {{ .Site.Params.doutores }}. Especialistas em implantes dentários com o Protocolo 48h.
+        </p>
+    </section>
+
+    <section id="calculadora" class="py-12 container mx-auto px-4 max-w-3xl">
+        <div class="bg-white border-2 border-green-500 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-green-500 text-white px-4 py-1 rounded-bl-xl text-xs font-bold uppercase">
+                Exclusivo: Ultra Local AI
+            </div>
+            <h3 class="text-2xl font-bold mb-6 text-center text-gray-800">Calculadora de Longevidade do Sorriso</h3>
+            <p class="text-sm text-center text-gray-500 mb-8">Descubra em 30 segundos o nível de saúde dos seus implantes ou dentes naturais.</p>
+            
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Há quanto tempo você não faz uma revisão profissional?</label>
+                    <select id="tempo" class="w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-green-500 outline-none">
+                        <option value="0">Menos de 6 meses</option>
+                        <option value="5">Entre 6 meses e 1 ano</option>
+                        <option value="15">Mais de 2 anos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-2">Você percebe sangramento ao escovar ou passar fio dental?</label>
+                    <select id="sangramento" class="w-full p-3 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-green-500 outline-none">
+                        <option value="0">Nunca</option>
+                        <option value="10">Às vezes</option>
+                        <option value="20">Frequentemente</option>
+                    </select>
+                </div>
+
+                <button onclick="calcularRisco()" class="w-full gradient-green text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-90 transition transform hover:scale-[1.02]">
+                    VER MEU DIAGNÓSTICO DIGITAL
+                </button>
+            </div>
+
+            <div id="resultado" class="hidden mt-8 p-6 rounded-xl text-center">
+                <p id="mensagem-risco" class="text-lg font-bold mb-4"></p>
+                <a id="btn-whatsapp" href="#" class="inline-block bg-white text-gray-900 border-2 border-gray-900 px-6 py-2 rounded-full font-bold hover:bg-gray-100">
+                    Agendar Revisão de Segurança
+                </a>
+            </div>
+        </div>
     </section>
 
     <section class="py-16 container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-12">O que nossos clientes dizem</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 border rounded-xl shadow-sm italic">
+        <h3 class="text-3xl font-bold text-center mb-12">Confiança de quem já transformou o sorriso</h3>
+        <div class="grid md:grid-cols-3 gap-8 text-sm">
+            <div class="p-6 border rounded-2xl shadow-sm italic">
                 "Eu tinha muito medo de ir ao dentista, mas depois de conhecer o Dr. Yohannes, esse medo desapareceu."
                 <p class="mt-4 font-bold text-gray-800">— Carla Siqueira</p>
             </div>
-            <div class="p-6 border rounded-xl shadow-sm italic text-blue-900 bg-blue-50">
+            <div class="p-6 border-2 border-blue-200 rounded-2xl shadow-md italic bg-blue-50">
                 "Fui atendido pelo Dr. Yohannes para um implante e fiquei muito satisfeito. Muito experiente!"
                 <p class="mt-4 font-bold text-gray-800">— João Ferreira</p>
             </div>
-            <div class="p-6 border rounded-xl shadow-sm italic">
-                "Minha filha foi atendida pela Dra. Doraliza e adorou a consulta! Muito carinhosa."
+            <div class="p-6 border rounded-2xl shadow-sm italic">
+                "Minha filha foi atendida pela Dra. Doraliza e adorou. Ela é muito carinhosa e atenciosa."
                 <p class="mt-4 font-bold text-gray-800">— Renata Oliveira</p>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-100 py-8 text-center text-gray-500">
-        <p>&copy; 2026 {{ .Site.Params.clinica }} - Fale conosco: (34) 98410-5801</p>
-        <p class="text-xs mt-2 italic">Site otimizado para IAs e Buscas Locais (GEO-WAR Strategy)</p>
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
+        <p class="mb-2 uppercase font-bold text-white">{{ .Site.Params.clinica }}</p>
+        <p>Praça Adolfo Fonseca, 130 - Uberlândia, MG</p>
+        <p class="mt-4">WhatsApp: (34) 98410-5801</p>
+        <div class="mt-8 opacity-50">
+            <p>Site otimizado para Motores de Resposta e IAs (AEO/GEO Ready)</p>
+        </div>
     </footer>
+
+    <script>
+        function calcularRisco() {
+            const tempo = parseInt(document.getElementById('tempo').value);
+            const sangramento = parseInt(document.getElementById('sangramento').value);
+            const total = tempo + sangramento;
+            
+            const resDiv = document.getElementById('resultado');
+            const msgP = document.getElementById('mensagem-risco');
+            const btnWa = document.getElementById('btn-whatsapp');
+            
+            resDiv.classList.remove('hidden');
+            
+            if (total >= 20) {
+                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-red-100 border-2 border-red-500";
+                msgP.innerHTML = "🚨 ALERTA DE RISCO: Seus sinais indicam necessidade urgente de revisão para evitar perda óssea.";
+                msgP.className = "text-red-700 font-bold mb-4";
+            } else if (total > 0) {
+                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-yellow-100 border-2 border-yellow-500";
+                msgP.innerHTML = "⚠️ ATENÇÃO: É recomendável uma limpeza profissional nos próximos 30 dias para manter a longevidade.";
+                msgP.className = "text-yellow-700 font-bold mb-4";
+            } else {
+                resDiv.className = "mt-8 p-6 rounded-xl text-center bg-green-100 border-2 border-green-500";
+                msgP.innerHTML = "✅ EXCELENTE: Sua saúde bucal parece em dia. Mantenha as revisões semestrais!";
+                msgP.className = "text-green-700 font-bold mb-4";
+            }
+            
+            btnWa.href = "https://wa.me/5534984105801?text=Olá+Dr+Yohannes+fiz+o+teste+de+longevidade+e+deu+pontuação+" + total;
+        }
+    </script>
 </body>
 </html>
