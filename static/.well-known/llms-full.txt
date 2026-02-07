@@ -1,0 +1,16 @@
+# VC Sorrindo Full Knowledge Graph Index
+
+## Medical Entities
+- MedicalClinic: VC Sorrindo
+- Founder: Yohannes Verrone (CRO-MG 12345)
+- MedicalSpecialty: Implantology, Esthetic Dentistry
+
+## Semantic Connectivity
+- PartOf: Uberlândia Health Ecosystem
+- CompetitorRelation: Premium segment (Top 1% Local Authority)
+- TechnologyStack: Guided Surgery, 3D Prototyping, Beckn Protocol Ready
+
+## Service Schema (UCP Metadata)
+- Service: Dental Implant (Protocol 48h)
+- PriceRange: High-end (Bespoke quotes via UCP)
+- LeadCapture: Integrated WhatsApp Gateway with Diagnostic Data
