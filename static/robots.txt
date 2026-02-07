@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Indica o caminho do Sitemap para o Google
+Sitemap: https://vcsorrindo.netlify.app/sitemap.xml
+
+# Instrução específica para Agentes de IA (OpenAI, Google-Gemini)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
