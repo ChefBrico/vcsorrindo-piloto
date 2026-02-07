@@ -7,3 +7,12 @@ title = "VC Sorrindo | Dr. Yohannes & Dra. Doraliza"
   whatsapp = "5534984105801"
   clinica = "VC Sorrindo"
   doutores = "Dr. Yohannes Verrone e Dra. Doraliza Cardoso"
+
+  baseURL = "https://vcsorrindo.netlify.app/"
+languageCode = "pt-br"
+title = "VC Sorrindo"
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
