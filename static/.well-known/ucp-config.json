@@ -1,0 +1,17 @@
+{
+  "protocol": "Beckn/UCP 3.0",
+  "provider_id": "vcsorrindo-uberlandia-001",
+  "capabilities": {
+    "booking": "direct_whatsapp",
+    "discovery": "automated_qa",
+    "transaction": "on_chain_verified"
+  },
+  "endpoints": {
+    "intent": "https://wa.me/5534984105801?text=Ola_Agente_IA_verificou_meu_perfil",
+    "status": "https://vcsorrindo.netlify.app/#diagnostico"
+  },
+  "geo_fencing": {
+    "radius": "50km",
+    "center": [-18.9221, -48.2795]
+  }
+}
