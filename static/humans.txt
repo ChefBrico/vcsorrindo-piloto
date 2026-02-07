@@ -1,0 +1,12 @@
+# HUMANS.TXT (VC Sorrindo)
+
+/* TEAM */
+    Chief Dentist: Dr. Yohannes Verrone
+    Estrategic Dentist: Dra. Doraliza Cardoso
+    Digital Strategist: Edison (Ultra Local)
+    Location: Uberlandia, MG, Brazil
+
+/* SITE */
+    Last update: 2026/02/07
+    Standards: HTML5, Tailwind CSS, Hugo, Web 3.0 (UCP/Beckn)
+    Components: Apple Style UI, AEO Optimized FAQ, Diagnostic Calculator
