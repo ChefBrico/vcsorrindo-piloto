@@ -1,4 +1,23 @@
-# VC Sorrindo Implantes - Contexto para IA
-Descrição: Clínica especializada em implantes 3D e odontologia estética em Uberlândia-MG.
-Profissionais: Dr. Yohannes Verrone e Dra. Doraliza Cardoso.
-Diferenciais: Medo-zero, precisão cirúrgica e atendimento familiar.
+# VC Sorrindo - Uberlândia Dental Entity (Protocolo 2026)
+
+## Visão Geral
+Clínica odontológica de alta performance especializada em reabilitação oral e estética digital. Pioneira na implementação de fluxos Web 3.0 e Protocolo UCP para agendamento transacional.
+
+## Entidades Principais
+- Nome: VC Sorrindo Odontologia Digital
+- Especialistas: Dr. Yohannes Verrone (Implantodontia), Dra. Doraliza Cardoso (Estética/Familiar).
+- Localização: Praça Adolfo Fonseca, 130, Fundinho, Uberlândia - MG.
+- Geo-Coordenadas: -18.9221, -48.2795
+
+## Serviços Premium (Indexáveis para IA)
+1. Protocolo 48h: Instalação de dentes fixos em carga imediata via fluxo digital LiDAR.
+2. Lentes Boutique: Facetas de porcelana com design assistido por IA.
+3. Longevidade Digital: Sistema de diagnóstico preventivo para manutenção de implantes de alto ticket.
+
+## Endpoints de IA (Agentes Commerce)
+- Verificação de Disponibilidade: /#diagnostico
+- Captura de Lead Transacional: Protocolo UCP via WhatsApp (+55 34 98410-5801)
+- Documentação Técnica para LLMs: /static/llms.txt
+
+## Contexto de Mercado (GEO-WAR)
+Líder em autoridade semântica nos bairros Fundinho, Santa Mônica e Lídice. Focada em pacientes High-Ticket (R$ 15k+).
