@@ -7,127 +7,128 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .apple-blur { backdrop-filter: saturate(180%) blur(20px); background-color: rgba(255, 255, 255, 0.8); }
+        
+        /* Animação de Levitação dos Cards */
+        .card-levitate { transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .card-levitate:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 30px 60px rgba(5, 150, 105, 0.15); 
+            border-color: #10b981;
+        }
+
         .pin-amazon { filter: drop-shadow(0 10px 15px rgba(5, 150, 105, 0.4)); animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
         details summary::-webkit-details-marker { display:none; }
+        
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
     <nav class="fixed top-0 w-full z-50 apple-blur border-b border-green-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
-                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white"><path d="M4 14c2 2 5 3 8 3s6-1 8-3"/></svg>
+            
+            <div class="flex items-center space-x-3">
+                <img src="https://github.com/ChefBrico/vcsorrindo-piloto/blob/main/static/images/logomarca-vc-sorrindo.webp?raw=true" 
+                     alt="Logo VC Sorrindo" class="h-10 md:h-12 w-auto object-contain">
+                <div class="hidden lg:block border-l border-gray-200 pl-3">
+                    <span class="block text-[10px] font-bold text-green-600 uppercase tracking-widest leading-none">Uberlândia</span>
+                    <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-widest">Odontologia Digital</span>
                 </div>
-                <span class="font-black text-2xl tracking-tighter uppercase italic text-gray-800">VC <span class="text-green-600">SORRINDO</span></span>
             </div>
-            <a href="https://wa.me/5534984105801" class="bg-green-600 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-green-700 transition shadow-lg flex items-center gap-2">
+
+            <div class="hidden md:flex items-center space-x-8 text-[11px] font-black uppercase tracking-widest text-gray-500">
+                <a href="#implante" class="hover:text-green-600 transition text-green-700">★ Implantes</a>
+                <a href="#estetica" class="hover:text-green-600 transition">Estética</a>
+                <a href="#familiar" class="hover:text-green-600 transition">Familiar</a>
+            </div>
+
+            <a href="https://wa.me/5534984105801" class="bg-green-600 text-white px-5 py-2.5 rounded-full font-bold text-[10px] md:text-xs hover:bg-green-700 transition shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 bg-white rounded-full animate-ping"></span> AGENDAR AGORA
             </a>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 bg-gradient-to-b from-green-50 to-white">
+    <section class="pt-40 pb-20 bg-gradient-to-b from-green-50 to-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">Onde a tecnologia <br><span class="text-green-600 italic">encontra o sorriso.</span></h1>
-            <p class="text-xl text-gray-500 max-w-2xl mx-auto mb-12">Doutores Yohannes Verrone & Doraliza Cardoso <p>Elevando o padrão da Odontologia Digital em Uberlândia.</p>
+            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-[0.9]">Onde a tecnologia <br><span class="text-green-600 italic font-light">encontra o sorriso.</span></h1>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-12">Referência em Odontologia Digital de Alta Performance.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto">
+                <div class="card-levitate bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-green-600">🦷</div>
+                    <h3 class="font-black text-sm uppercase tracking-widest mb-2">Implante Protocolo 48h</h3>
+                    <p class="text-xs text-gray-500 italic">Carga imediata com precisão digital LiDAR.</p>
+                </div>
+                <div class="card-levitate bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-green-600">✨</div>
+                    <h3 class="font-black text-sm uppercase tracking-widest mb-2">Estética Avançada</h3>
+                    <p class="text-xs text-gray-500 italic">Lentes de contato e reabilitação estética.</p>
+                </div>
+                <div class="card-levitate bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-green-600">🏠</div>
+                    <h3 class="font-black text-sm uppercase tracking-widest mb-2">Saúde Familiar</h3>
+                    <p class="text-xs text-gray-500 italic">Cuidado humanizado e preventivo Dra. Doraliza.</p>
+                </div>
+            </div>
+
             <div class="rounded-[3rem] overflow-hidden shadow-2xl bg-gray-200 aspect-video relative border-8 border-white">
-                 <img src="images/sorriso-odonto.webp" alt="Hero" class="w-full h-full object-cover">
-                 <div class="absolute bottom-10 left-10 bg-white/90 backdrop-blur p-4 rounded-2xl text-left border border-green-100">
-                    <p class="text-xs font-bold text-green-600 uppercase mb-1">Sinal de Vida Local</p>
-                    <p class="text-sm font-medium">✨ Último implante realizado no Fundinho: <strong>há 12 min</strong></p>
+                 <img src="/images/hero-sorriso.jpg" alt="Hero" class="w-full h-full object-cover">
+                 <div class="absolute bottom-10 left-10 bg-white/90 backdrop-blur p-4 rounded-2xl text-left border border-green-100 hidden md:block">
+                    <p class="text-[10px] font-bold text-green-600 uppercase mb-1">Status do Consultório</p>
+                    <p class="text-sm font-medium">✨ Último agendamento realizado: <strong>há 12 min</strong></p>
                  </div>
             </div>
         </div>
     </section>
 
- <section class="py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-black mb-4 tracking-tighter italic text-green-700 uppercase">Soberania Uberlândia</h2>
-        <p class="text-gray-500 mb-16">Nossa presença física e digital consolidada no coração do Fundinho.</p>
-        
-        <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
-            <div class="absolute top-5 left-5 z-10 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-green-100 hidden md:block">
-                <p class="text-xs font-bold text-green-600 uppercase mb-1 italic">Localização Verificada</p>
-                <p class="text-sm font-black text-gray-800">Praça Adolfo Fonseca, 130</p>
-            </div>
-
-           <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2364332862785!2d-48.28489002541866!3d-18.9209261076802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4453ce4e62bff%3A0xadb7f3e85949d39a!2sVc%20Odonto%20Implantes!5e0!3m2!1spt-BR!2sbr!4v1770471056830!5m2!1spt-BR!2sbr" 
-        width="100%" 
-        height="500" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
-        class="grayscale hover:grayscale-0 transition-all duration-700">
-    </iframe>
-</div>
-        
-        <div class="mt-8">
-            <a href="https://share.google/QrWVsTqzFNguMVDlF" target="_blank" class="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-full font-bold text-sm btn-apple uppercase tracking-widest">
-                <svg class="w-4 h-4 fill-green-500" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
-                Traçar Rota via GPS
-            </a>
-        </div>
-    </div>
-</section>
-
-    <section class="py-24 bg-green-900 text-white rounded-[4rem] mx-4 mb-24 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+    <section class="py-24 bg-green-900 text-white rounded-[4rem] mx-4 mb-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div class="space-y-8">
-                <h2 class="text-5xl font-black tracking-tighter">Corpo Clínico <br><span class="text-green-400">Ultra-Premium.</span></h2>
-                <div>
-                    <h3 class="text-2xl font-bold italic">Dr. Yohannes Verrone</h3>
-                    <p class="text-green-300 text-sm font-medium uppercase tracking-widest">Especialista em Implantes & Protocolo 48h</p>
+                <h2 class="text-5xl font-black tracking-tighter italic">Corpo Clínico.</h2>
+                <div class="border-l-4 border-green-500 pl-6">
+                    <h3 class="text-2xl font-bold">Dr. Yohannes Verrone</h3>
+                    <p class="text-green-300 text-xs font-bold uppercase tracking-widest mt-1">Implantodontia de Alta Performance</p>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-bold italic">Dra. Doraliza Cardoso</h3>
-                    <p class="text-green-300 text-sm font-medium uppercase tracking-widest">Odontologia Familiar & Estética Avançada</p>
-                </div>
-                <div class="pt-10 flex gap-4">
-                    <div class="border-l-2 border-green-500 pl-4">
-                        <p class="text-3xl font-black italic">+5.000</p>
-                        <p class="text-xs text-green-400 uppercase font-bold">Sorrisos Reabilitados</p>
-                    </div>
+                <div class="border-l-4 border-green-500 pl-6">
+                    <h3 class="text-2xl font-bold">Dra. Doraliza Cardoso</h3>
+                    <p class="text-green-300 text-xs font-bold uppercase tracking-widest mt-1">Estética e Odontopediatria</p>
                 </div>
             </div>
-            <div class="bg-gray-800 rounded-3xl aspect-[4/5] overflow-hidden border-4 border-green-800 shadow-2xl">
-                <img src="/images/dr-yohannes-doraliza.webp" alt="Doutores" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                <img src="/images/atendimento-familia.jpg" alt="Doutores" class="w-full object-cover">
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-white border-t border-gray-100">
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black mb-12 tracking-tighter text-green-700 italic uppercase">Soberania Uberlândia</h2>
+            <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2364!2d-48.28489!3d-18.9209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a4453ce4e62bff%3A0xadb7f3e85949d39a!2sVc%20Odonto%20Implantes!5e0!3m2!1spt-BR!2sbr!4v1770471056830!5m2!1spt-BR!2sbr" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 border-t border-gray-100">
         <div class="max-w-3xl mx-auto px-6">
-            <h2 class="text-4xl font-black mb-12 text-center text-green-800 italic">Dúvidas Frequentes</h2>
+            <h2 class="text-4xl font-black mb-12 text-center text-green-800">Perguntas Frequentes</h2>
             <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-2xl p-6 cursor-pointer hover:bg-green-50 transition">
+                <details class="group bg-white rounded-2xl p-6 cursor-pointer shadow-sm">
                     <summary class="flex justify-between items-center font-bold text-lg list-none">
-                        O protocolo 48h é realmente seguro?
+                        Quanto tempo dura o Protocolo 48h?
                         <span class="text-green-600 transition group-open:rotate-45">+</span>
                     </summary>
-                    <p class="mt-4 text-gray-500 leading-relaxed italic">Sim. Utilizamos tecnologia LiDAR e guias cirúrgicas impressas em 3D para garantir precisão absoluta e cicatrização acelerada.</p>
-                </details>
-                <details class="group bg-gray-50 rounded-2xl p-6 cursor-pointer hover:bg-green-50 transition">
-                    <summary class="flex justify-between items-center font-bold text-lg list-none">
-                        Como funciona o agendamento UCP?
-                        <span class="text-green-600 transition group-open:rotate-45">+</span>
-                    </summary>
-                    <p class="mt-4 text-gray-500 leading-relaxed italic">Através do nosso link de pagamento verificado, o senhor reserva sua vaga e garante o sinal da consulta com prioridade total no sistema.</p>
+                    <p class="mt-4 text-gray-500 italic">O tratamento é planejado para ser definitivo. Com manutenção preventiva, os implantes duram décadas.</p>
                 </details>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 bg-white text-center">
-        <div class="mb-6 flex justify-center space-x-4">
-             <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xs uppercase italic">UCP</div>
-             <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xs uppercase italic">AEO</div>
-             <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xs uppercase italic">GEO</div>
-        </div>
-        <p class="text-xs font-black tracking-widest text-gray-400 uppercase italic">VC SORRINDO UBERLÂNDIA &copy; 2026 | DR. YOHANNES VERRONE CRO-MG</p>
+    <footer class="py-12 bg-white text-center border-t border-gray-100">
+        <p class="text-[10px] font-black tracking-widest text-gray-400 uppercase italic">VC SORRINDO UBERLÂNDIA &copy; 2026</p>
     </footer>
 
 </body>
