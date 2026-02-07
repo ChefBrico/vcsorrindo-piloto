@@ -134,42 +134,29 @@
                 return;
             }
 
-            // Simula processamento
             form.classList.add('hidden');
             resArea.classList.remove('hidden');
 
             let mensagemWhats = "";
             if (tempo === "alto") {
                 txtRes.innerHTML = "⚠️ ALERTA DE RISCO CRÍTICO: Seu índice de longevidade está comprometido.";
-                mensagemWhats = "Olá, acabei de fazer o teste de longevidade no site e deu ALTO RISCO. Preciso de uma avaliação urgente.";
+                mensagemWhats = "Olá Dr. Yohannes, meu teste de longevidade deu ALTO RISCO. Preciso de uma avaliação urgente.";
             } else if (tempo === "medio") {
                 txtRes.innerHTML = "🟠 ATENÇÃO: Seu sorriso precisa de manutenção preventiva imediata.";
-                mensagemWhats = "Olá, meu teste de longevidade deu ATENÇÃO. Gostaria de saber mais sobre a revisão premium.";
+                mensagemWhats = "Olá, meu teste de longevidade deu ATENÇÃO. Quero saber mais sobre a revisão premium.";
             } else {
                 txtRes.innerHTML = "🟢 EXCELENTE: Sua saúde bucal está em nível de elite.";
-                mensagemWhats = "Olá, meu teste deu EXCELENTE, mas quero manter assim. Gostaria de agendar minha próxima revisão.";
+                mensagemWhats = "Olá, meu teste deu EXCELENTE. Quero agendar minha próxima revisão para manter assim.";
             }
 
-            // Link dinâmico para o WhatsApp com a mensagem do resultado
             btnConectar.href = "https://wa.me/5534984105801?text=" + encodeURIComponent(mensagemWhats);
         }
     </script>
 
-    <footer class="py-12 text-center border-t border-gray-100">
-        <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest italic">VC SORRINDO © 2026 | DR. YOHANNES VERRONE | DRA. DORALIZA CARDOSO</p>
+    <footer class="py-12 bg-white text-center border-t border-gray-100">
+        <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest italic">
+            VC SORRINDO © 2026 | DR. YOHANNES VERRONE | DRA. DORALIZA CARDOSO
+        </p>
     </footer>
-
-    <script>
-        function analisar() {
-            const val = document.getElementById('tempo_revisao').value;
-            const res = document.getElementById('resultado_calc');
-            res.classList.remove('hidden');
-            if(val == "2") {
-                res.innerHTML = "🔴 ALTO RISCO: Sua estrutura óssea pode estar sob estresse. Agende via UCP imediatamente.";
-            } else {
-                res.innerHTML = "🟢 BAIXO RISCO: Sua longevidade está protegida. Continue suas revisões semestrais.";
-            }
-        }
-    </script>
 </body>
 </html>
