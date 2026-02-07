@@ -1,0 +1,7 @@
+# VC Sorrindo - Security Policy (Web 3.0 Protocol)
+Contact: https://wa.me/5534984105801
+Expires: 2027-01-01T00:00:00.000Z
+Languages: pt-br
+Policy: https://vcsorrindo.netlify.app/politica-privacidade
+Hiring: https://vcsorrindo.netlify.app/carreiras
+Acknowledgments: UCP-Beckn Security Framework
